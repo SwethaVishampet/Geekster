@@ -1,0 +1,5 @@
+Update Oct 28 -- Login/Register
+
+The Picture slideshow thing I thought it can be like some snapshots of the features available. We can change the pictures at the end of the project.
+
+Also, I know we decided to use Dropbox layout for login/register. Seems a bit difficult to me at the moment. But once I finish the backend linking (hopefully by tmrw morning) and the Profile part, I thought I could come back and change the formatting if needed and if we had time.

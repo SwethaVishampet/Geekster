@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en" class="en">
+    <head>
+        <title>Geekster / Login</title>
+        
+       
+        <link rel="icon" href="http://goo.gl/t9w11" type="image/x-icon" />
+        <link rel="stylesheet" href="https://s-passets-ec.pinimg.com/css/pinboard_b414c0e2.css" type="text/css" media="all"/>
+        <!--[if (gt IE 6)&(lt IE 9)]><link rel="stylesheet" href="https://s-passets-ec.pinimg.com/css/ie7-and-up_50a08c5f.css" type="text/css" media="all" /><![endif]-->
+        <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+        <script type="text/javascript">if (!window.console) { window.console = {log: function(){}} };</script>
+        <script type="text/javascript">window.userIsAuthenticated = false;
+        </script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://s-passets-ec.pinimg.com/js/bundle_pin_180023e8.js" type="text/javascript" charset="utf-8"--></script>
+        
+        
+        
+    </head>
+    <noscript>
+    <div id="NoScript">
+        <h1>You need to enable Javascript.</h1>
+    </div>
+</noscript>
+    
+
+    <p><br></br></p>
+
+
+    <h1 align="center">GEEKSTER</h1>
+
+    <h2  align="center" font=""> An online community for all the awesome geeks out there! </h2>
+
+    <br></br>
+    
+    
+     <br></br>
+
+    <form id="AuthForm" class="Form FancyForm AuthForm" action="login.php" method="POST" accept-charset="utf-8">
+        <ul>
+
+            <li>
+                <input id="id_email" name="email" type="text" />
+                <label>Username</label>
+                <span class="fff"></span>
+
+                
+            </li>
+
+            <li>
+                <input id="id_password" name="password" type="password" />
+                <label>Password</label>
+                <span class="fff"></span>
+
+                
+            </li>
+
+            <input type="hidden" name="next" value="/">
+
+            <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='e9ba84f1c346105423638ddc65e582d9' /></div><div style='display:none'><input type='hidden' name='_ch' value='kqoevj1f' /></div>
+
+        </ul>
+
+        <div class="non_inputs">
+            <button type="submit" class="Button WhiteButton Button18"><a href="profile.html">Login</a></button>
+            <a id="resetPassword" class="colorless" href="/password/reset/">Forgot your password?</a>
+        </div>
+
+    </form><!-- .Form.FancyForm.AuthForm -->
+
+    <form id="ResetForm" class="Form FancyForm AuthForm ResetForm" action="/password/reset/" method="POST" accept-charset="utf-8">
+        <ul>
+
+            <li>
+                <input id="id_email_2" name="email" type="text" />
+                <label>Email Address</label>
+                <span class="fff"></span>
+            </li>
+
+            <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='e9ba84f1c346105423638ddc65e582d9' /></div><div style='display:none'><input type='hidden' name='_ch' value='kqoevj1f' /></div>
+
+        </ul>
+
+        <div class="non_inputs">
+            <button type="submit" class="Button WhiteButton Button18">Reset</button>
+            <a id="backToLogin" class="colorless" href="">Back to Login?</a>
+        </div>
+
+    </form><!-- .Form.FancyForm.AuthForm.ResetForm -->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            Login.setup();
+            FancyForm.setup();
+        });
+    </script>
+
+
+    <div id="SearchAutocompleteHolder"></div>
+    <button id="ScrollToTop" class="Button WhiteButton Offscreen Indicator" type="button">
+    Scroll to Top
+</button>
+    
+        <script type="text/javascript">
+$(document).ready(function() {
+    
+    if (top != self) {
+        $('body').html('<h1>Unauthorized</h1>')
+    }
+});
+</script>
+    
+    
+<script type="text/javascript">
+	(function (){
+			var footer = new Image();
+			footer.src = '/_ch/aj1ffebb';
+	})();
+</script>
+
+    
+<script type="text/javascript">
+	$('html').ajaxSend(function(event, xhr, settings) {
+		xhr.setRequestHeader("X-CH", 'kqoevj1f');
+	});
+</script>
+
+    <script type="text/javascript">
+    function trackGAEvent(category, action, label, value) {
+    _gaq = _gaq || []
+
+
+        // Event
+    _gaq.push(['_trackEvent', category, action, label, value]);
+
+    // Virtual Page
+        virtual_page = '_event_';
+    virtual_page += "/" + category;
+
+    if(!action) action = '_';
+        virtual_page+="/" + action;
+    if(label) virtual_page+= "/" + label;
+
+    _gaq.push(['_trackPageview', virtual_page]);
+
+        
+    }
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-12967896-1']);
+    _gaq.push(['_setCustomVar', 1, 'is_logged_in', 'logged out', 2]);
+    _gaq.push(['_setCustomVar', 2, 'page_name', 'login_screen', 1]);
+
+    
+
+    
+    
+        _gaq.push(['_trackPageview']);
+    
+
+    (function() {
+      var ga = document.createElement('script'); ga.type='text/javascript'; ga.async=true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+    })();
+
+</script>
+
+
+    
+<script type="text/javascript">
+    var autoLoginFbook = function(response) {
+        if (response.status !== 'connected') {
+            return;
+        }
+        var uid = response.authResponse.userID;
+        var accessToken = response.authResponse.accessToken;
+        $.post("/login/facebook/", {
+            access_token: accessToken,
+            fb_id: uid},
+            function(resp) {
+                if (resp.status === "success") {
+                    window.location.reload()
+                }
+            });
+    };
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: 274266067164,
+            cookie: true
+        });
+        FB.getLoginStatus(autoLoginFbook);
+    };
+    (function() {
+        var e = document.createElement('script');
+        e.async = true;
+        e.src = document.location.protocol +
+        '//connect.facebook.net/en_US/all.js';
+        var scriptTag = document.getElementsByTagName('script')[0];
+        scriptTag.parentNode.appendChild(e);
+    } ());
+</script>
+
+
+    <div id="ErrorDialog" class="ModalContainer alertBox">
+    <div class="modal">
+        <div class="closeBtn closeButton">&nbsp;</div>
+        <h2>Sorry!</h2>
+        <div class="message"></div>
+        <div class="footer">
+          <button class="Button RedButton Button18 closeButton" type="button">Ok</button>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</div>
+
+<div id="ConfirmationDialog" class="ModalContainer alertBox">
+    <div class="modal">
+        <div class="closeBtn closeButton">&nbsp;</div>
+        <h2>Confirmation</h2>
+        <div class="message"></div>
+        <div class="footer">
+          <button class="Button RedButton Button18 okButton confOkButton" type="button">Ok</button>
+          <button class="Button WhiteButton Button18 closeButton confCloseButton" type="button">Cancel</button>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</div>
+
+
+</html>
